@@ -7,14 +7,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Kube CSS -->
-    <link rel="stylesheet" href="dist/css/kube.css">
+    <link rel="stylesheet" href="assets/css/kube.css">
+    <style>
+        .row {
+            margin-bottom: 1px;
+        }
+
+        .column {
+            background: rgba(0, 0, 0, .25);
+            margin-right: 1px;
+        }
+
+        .column:first-child {
+            /*border-left: 1px solid #ccc;*/
+        }
+    </style>
 
 </head>
 <body>
-    <h1>Hello, world!</h1>
+<div class="container">
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <div class="row collapse">
 
-    <!-- Kube JS + jQuery are used for some functionality, but are not required for the basic setup -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="dist/js/kube.js"></script>
+        <div class="eight column"><p>Eight Column</p></div>
+        <div class="four column"><p>Four Column</p></div>
+        <div class="four column"><p>Four Column</p></div>
+    </div>
+    <div class="row">
+
+        <div class="four column">Six Column</div>
+        <div class="eight column">Eight Column</div>
+        <div class="four column">Two Column</div>
+    </div>
+    <div class="row gutters">
+
+        <div class="four column">Six Column</div>
+        <div class="eight column">Eight Column</div>
+        <div class="four column">Two Column</div>
+    </div>
+    <div class="row">
+
+        <div class="four column">Six Column</div>
+        <div class="eight column">Eight Column</div>
+        <div class="four column first">Two Column First</div>
+    </div>
+    <div class="row">
+
+        <div class="six column">Six Column</div>
+        <div class="six column offset-four">Six Column Offset-four</div>
+    </div>
+    <div class="row">
+
+        <div class="eight column">Eight Column</div>
+        <div class="eight column nested">
+            <div class="row">
+                <div class="eight column">Eight nested Column</div>
+                <div class="eight column">Eight nested Column</div>
+            </div>
+        </div>
+    </div>
+    <div class="row around">
+        <div class="four column">Four Column</div>
+        <div class="four column">Four Column</div>
+        <div class="four column">Four Column</div>
+    </div>
+    <div class="row between">
+        <div class="four column">Four Column</div>
+        <div class="four column">Four Column</div>
+        <div class="four column">Four Column</div>
+    </div>
+    <div class="row align-center">
+        <div class="ten column">Ten Column</div>
+    </div>
+    <div class="row align-right">
+        <div class="four column">Four Column</div>
+        <div class="four column">Four Column</div>
+    </div>
+    <div class="row">
+        <div class="four column push-center">Four Column</div>
+    </div>
+</div>
+<!-- Kube JS + jQuery are used for some functionality, but are not required for the basic setup -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="dist/js/kube.js"></script>
 </body>
 </html>
